@@ -1,4 +1,5 @@
-%% Script general
+%% This code was developed by Daniel Riofrio.
+%% Main script.
 
 xs = -5:0.1:5;
 ys = -5:0.1:5;
@@ -52,9 +53,9 @@ surface(xs, ys, fxy_5);
 grid on;
 axis square;
 
-%% Representación de una solución:
+%% RepresentaciÃ³n de una soluciÃ³n:
 % 10 bits [signo][x][x][x][x][signo][y][y][y][y], 
-% limita la búsqueda entre -15 y +15, tanto para x, como para y.
+% limita la bÃºsqueda entre -15 y +15, tanto para x, como para y.
 individuo = [0,0,0,0,0,0,0,0,0,0];
 
 % translation to integer numbers.
@@ -74,7 +75,7 @@ if(signo_y == 1)
     y_decimal = -y_decimal;
 end
 
-%% Evaluación de fitness:
+%% EvaluaciÃ³n de fitness:
 
 fitness = x_decimal^2 + y_decimal^2 - 10;
 
